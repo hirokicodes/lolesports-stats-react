@@ -1,0 +1,15 @@
+export enum LeaguepediaTournamentNames {
+  MSI_2021 = "MSI 2021",
+  LCS_2021_SPRING = "LCS 2021 Spring",
+  LCS_2021_SUMMER = "LCS 2021 Summer",
+  LPL_2021_SPRING = "LPL 2021 Spring",
+  LPL_2021_SUMMER = "LPL 2021 Summer",
+  LCK_2021_SPRING = "LCK 2021 Spring",
+  LCK_2021_SUMMER = "LCK 2021 Summer",
+  LEC_2021_SPRING = "LEC 2021 Spring",
+  LEC_2021_SUMMER = "LEC 2021 Summer",
+  PCS_2021_SPRING = "PCS 2021 Spring",
+  PCS_2021_SUMMER = "PCS 2021 Summer",
+  VCS_2021_SPRING = "VCS 2021 Spring",
+  VCS_2021_SUMMER = "VCS 2021 Summer",
+}
