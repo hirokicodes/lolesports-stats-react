@@ -17,7 +17,10 @@ export const Icon: React.FC<Props> = ({
   return (
     <span
       style={{
-        backgroundImage: `url('/assets/${path.replace("'", "%27")}')`,
+        backgroundImage: `url('${process.env.PUBLIC_URL}/assets/${path.replace(
+          "'",
+          "%27"
+        )}')`,
         backgroundSize: `${backgroundSize}px`,
       }}
       className={`w-${width} h-${height} mx-1 rounded-lg text-black inline-block bg-center`}
