@@ -3,27 +3,15 @@ import { Link, useHistory } from "react-router-dom";
 
 interface Props {
   path: string; // Image path from assets eg. scoreboard-icons/kills.png
-  backgroundSize?: number; // Background size in pixels
   width?: number;
   height?: number;
 }
 
-export const Icon: React.FC<Props> = ({
-  path,
-  backgroundSize = 18,
-  width = 4,
-  height = 4,
-}) => {
+export const Icon: React.FC<Props> = ({ path, width = 6, height = 6 }) => {
   return (
-    <span
-      style={{
-        backgroundImage: `url('${process.env.PUBLIC_URL}/assets/${path.replace(
-          "'",
-          "%27"
-        )}')`,
-        backgroundSize: `${backgroundSize}px`,
-      }}
-      className={`w-${width} h-${height} mx-1 rounded-lg text-black inline-block bg-center`}
+    <img
+      src={`${process.env.PUBLIC_URL}/assets/${path.replace("'", "%27")}`}
+      className={`w-${width} h-${height} rounded-lg inline-block bg-center m-0`}
     />
   );
 };

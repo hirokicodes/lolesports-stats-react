@@ -208,11 +208,20 @@ export const Game: React.FC<Props> = ({ gameId }) => {
               const playerData = playersData[i];
               const runes = playerData.Runes.split(",");
               return (
-                <div key={i} className="flex">
+                <div key={i} className="flex mt-1">
                   <div className="w-1/5">
-                    <div className="grid-cols-3">
+                    <div className="grid-cols-3 ">
                       {playerData.Items.map((item, i) => {
-                        return <Icon key={i} path={`item-icons/${item}.png`} />;
+                        return (
+                          <Icon
+                            key={i}
+                            path={
+                              item
+                                ? `item-icons/${item}.png`
+                                : "item-icons/noitem.png"
+                            }
+                          />
+                        );
                       })}
                     </div>
                   </div>
@@ -223,7 +232,11 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                         <Icon path={`item-icons/${playerData.Trinket}.png`} />
                       </div>
                       <div className="w-2/6">
-                        <Icon path="scoreboard-icons/gold.png" />
+                        <Icon
+                          path="scoreboard-icons/gold.png"
+                          width={4}
+                          height={4}
+                        />{" "}
                         {playerData.Gold}
                       </div>
                       <div className="w-2/6">
@@ -247,6 +260,8 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                     </div>
                     <div>
                       <Icon
+                        width={5}
+                        height={5}
                         path={`rune-icons/${
                           runeToTreeMap[runes[4] as keyof typeof runeToTreeMap]
                         }.png`}
@@ -255,9 +270,8 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                   </div>
                   <div className="w-1/10 flex flex-col">
                     <Icon
-                      width={8}
-                      height={8}
-                      backgroundSize={36}
+                      width={12}
+                      height={12}
                       path={`champion-icons/${playerData.Champion}.png`}
                     />
                   </div>
@@ -271,12 +285,11 @@ export const Game: React.FC<Props> = ({ gameId }) => {
               const playerData = playersData[i];
               const runes = playerData.Runes.split(",");
               return (
-                <div key={i} className="flex">
+                <div key={i} className="flex mt-1">
                   <div className="w-1/10 flex flex-col">
                     <Icon
-                      width={8}
-                      height={8}
-                      backgroundSize={36}
+                      width={12}
+                      height={12}
                       path={`champion-icons/${playerData.Champion}.png`}
                     />
                   </div>
@@ -291,6 +304,8 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                     </div>
                     <div>
                       <Icon
+                        width={5}
+                        height={5}
                         path={`rune-icons/${
                           runeToTreeMap[runes[4] as keyof typeof runeToTreeMap]
                         }.png`}
@@ -310,7 +325,11 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                         <span className="">cs</span>
                       </div>
                       <div className="w-2/6">
-                        <Icon path="scoreboard-icons/gold.png" />
+                        <Icon
+                          path="scoreboard-icons/gold.png"
+                          width={4}
+                          height={4}
+                        />{" "}
                         {playerData.Gold}
                       </div>
 
@@ -322,7 +341,16 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                   <div className="w-1/5">
                     <div className="grid-cols-3">
                       {playerData.Items.map((item, i) => {
-                        return <Icon key={i} path={`item-icons/${item}.png`} />;
+                        return (
+                          <Icon
+                            key={i}
+                            path={
+                              item
+                                ? `item-icons/${item}.png`
+                                : "item-icons/noitem.png"
+                            }
+                          />
+                        );
                       })}
                     </div>
                   </div>
