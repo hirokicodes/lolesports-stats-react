@@ -234,8 +234,8 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                       <div className="w-2/6">
                         <Icon
                           path="scoreboard-icons/gold.png"
-                          width={4}
-                          height={4}
+                          width={"w-4"}
+                          height={"h-4"}
                         />{" "}
                         {playerData.Gold}
                       </div>
@@ -260,8 +260,8 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                     </div>
                     <div>
                       <Icon
-                        width={5}
-                        height={5}
+                        width={"w-5"}
+                        height={"h-5"}
                         path={`rune-icons/${
                           runeToTreeMap[runes[4] as keyof typeof runeToTreeMap]
                         }.png`}
@@ -270,8 +270,8 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                   </div>
                   <div className="w-1/10 flex flex-col">
                     <Icon
-                      width={12}
-                      height={12}
+                      width={"w-12"}
+                      height={"h-12"}
                       path={`champion-icons/${playerData.Champion}.png`}
                     />
                   </div>
@@ -288,8 +288,8 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                 <div key={i} className="flex mt-1">
                   <div className="w-1/10 flex flex-col">
                     <Icon
-                      width={12}
-                      height={12}
+                      width={"w-12"}
+                      height={"h-12"}
                       path={`champion-icons/${playerData.Champion}.png`}
                     />
                   </div>
@@ -304,8 +304,8 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                     </div>
                     <div>
                       <Icon
-                        width={5}
-                        height={5}
+                        width={"w-5"}
+                        height={"h-5"}
                         path={`rune-icons/${
                           runeToTreeMap[runes[4] as keyof typeof runeToTreeMap]
                         }.png`}
@@ -327,8 +327,8 @@ export const Game: React.FC<Props> = ({ gameId }) => {
                       <div className="w-2/6">
                         <Icon
                           path="scoreboard-icons/gold.png"
-                          width={4}
-                          height={4}
+                          width={"w-4"}
+                          height={"h-4"}
                         />{" "}
                         {playerData.Gold}
                       </div>
