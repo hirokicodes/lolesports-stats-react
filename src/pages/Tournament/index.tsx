@@ -8,7 +8,9 @@ import {
 } from "react-router-dom";
 import { AppAPI } from "../../api";
 import { PageLayout } from "../../layouts/PageLayout";
+import { Champions } from "./Champions";
 import { Standings } from "./Standings";
+import { TournamentGames } from "./TournamentGames";
 import { TournamentMatches } from "./TournamentMatches";
 
 enum TabView {
@@ -149,13 +151,13 @@ export const Tournament: React.FC<RouteComponentProps<{ name: string }>> = ({
           <TournamentMatches tournamentName={name} />
         </Route>
         <Route path={`${path}/all-games`}>
-          <div>all games</div>
+          <TournamentGames tournamentName={name} />
         </Route>
         <Route path={`${path}/standings`}>
           <Standings tournamentName={name} />
         </Route>
         <Route path={`${path}/champions`}>
-          <div>champions</div>
+          <Champions tournamentName={name} />
         </Route>
       </Switch>
     </PageLayout>

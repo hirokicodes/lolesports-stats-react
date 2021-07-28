@@ -151,6 +151,7 @@ const runeToTreeMap = {
 export const Game: React.FC<Props> = ({ gameId }) => {
   async function getGameData() {
     const data = await AppAPI.getRoute(`/games/${encodeURIComponent(gameId)}`);
+    console.log(data);
     return data;
   }
 

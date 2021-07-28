@@ -86,7 +86,6 @@ export const Standings: React.FC<Props> = ({ tournamentName }) => {
   if (data) {
     content = (
       <div>
-        <div>standings</div>
         <div>
           <Table columns={columns} data={tableData!} />
         </div>
