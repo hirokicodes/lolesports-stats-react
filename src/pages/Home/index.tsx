@@ -115,6 +115,10 @@ const SearchSeasons = [
     name: "S11",
     value: "2021",
   },
+  {
+    name: "S12",
+    value: "2022",
+  },
 ];
 
 interface DropdownOption {
